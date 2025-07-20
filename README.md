@@ -17,3 +17,8 @@ npm run dev
 ```
 
 http://localhost:3000/ へアクセスする
+
+### Vuetify3 のインストール
+```
+npm install vuetify@next mdi sass --save-dev
+```
