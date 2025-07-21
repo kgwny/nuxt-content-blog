@@ -1,18 +1,18 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const { data: page } = await useAsyncData('page-' + route.path, () => {
+const { data: pages } = await useAsyncData('page-' + route.path, () => {
   return queryCollection('content').path(route.path).first()
 })
 
-if (!page.value) {
+if (!pages.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
 </script>
 
 <template>
   <ContentRenderer
-    v-if="page"
-    :value="page"
+    v-if="pages"
+    :value="pages"
   />
 </template>
