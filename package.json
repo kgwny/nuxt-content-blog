@@ -9,7 +9,20 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "@nuxt/content": "^3.6.3",
     "nuxt": "^4.0.0"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.2.0",
+    "@nuxt/eslint-config": "^1.2.0",
+    "eslint": "^9.31.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-vue": "^10.3.0",
+    "mdi": "^2.2.43",
+    "sass": "^1.89.2",
+    "typescript": "^5.8.3",
+    "vite-plugin-vuetify": "^2.1.1",
+    "vuetify": "^3.9.2"
   }
 }
