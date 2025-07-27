@@ -2,7 +2,9 @@
 const route = useRoute()
 
 const { data: pages } = await useAsyncData('page-' + route.path, () => {
-  return queryCollection('content').path(route.path).first()
+  return queryCollection('contents')
+    .path(route.path)
+    .first()
 })
 
 if (!pages.value) {
@@ -11,8 +13,10 @@ if (!pages.value) {
 </script>
 
 <template>
-  <ContentRenderer
-    v-if="pages"
-    :value="pages"
-  />
+  <div class="prose max-w-none">
+    <ContentRenderer
+      v-if="pages"
+      :value="pages"
+    />
+  </div>
 </template>
